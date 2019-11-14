@@ -1,0 +1,6 @@
+#!/bin/sh
+# intended for updating the included providers file
+set -e
+curl https://oembed.com/providers.json > src/providers.json
+git add src/providers.json
+git commit -m 'update providers.json'
